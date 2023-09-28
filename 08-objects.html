@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+        const product = {
+          name: 'socks',
+          price: 1090
+        };
+
+        console.log(typeof product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product);
+
+        product.newProperty = true;
+        console.log(product);
+
+        delete product.newProperty;
+        console.log(product);
+      */
+      /*
+        //nested object
+        const product2 = {
+          name: 'shirt',
+          'delivery-time': '1 day',
+          rating:{
+            stars: 4.5,
+            count: 87
+          },
+          fun: function function1(){
+            console.log('function inside the object');
+          }
+        };
+        //function insde an object is called a method
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+
+        console.log(product2.rating.count);
+        product2.fun();
+
+        //console is a object and log is a method inside of it 
+        console.log(typeof console.log);
+        //console is also a Built-In object and so is JSON and localStorage
+        //why use json? it is more universal
+        //JSON is an object and stringify is a method inside it 
+        //JSON does not support functions
+        JSON.stringify(product2) // converts Object -> json 
+        console.log(JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+        JSON.parse(jsonString) // converts Json -> Object
+
+        //normally variables get deleted after we refresh 
+        //to avoid this we use the built in object localStorage
+      */
+        //Auto-Boxing is js wrapping the string in an object automatically so then we can use methods for it
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+        //objects are references
+        const object1 = {
+          message: 'hello',
+        };
+        //this just copies the reference of the object1 not create a full copy of it
+        const object2 = object1;
+        // although the object1 was created using const we are still able to manipulate its inside data because js just created a reference to the object
+        object1.message = 'good job';
+        console.log(object1);
+        console.log(object2); //also get updated bc it is poiting to the same referece as object1
+
+        const object3 = {
+          message: 'Good job!'
+        };
+
+        console.log(object3 === object1) //false they have different references 
+
+        /***shorcuts for objects***/
+        const object4 = {
+          message: 'Good job!',
+          price: 799
+        };
+
+        //these two lines do the same thing 
+        //const message = object4.message;
+        const {message, price} = object4; //destructuring 
+        console.log(message);
+        console.log(price);
+
+        
+        const object5 = {
+          //message: message,
+          message, //shorthand Property if both have the same name
+          /*
+            method: function function1(){ //method property
+              console.log('method');
+            }
+          */
+          method() {
+            console.log('method'); //same as above aka method property
+          }
+        };
+        console.log(object5);
+        object5.method();
+    </script>
+  </body>
+</html>
