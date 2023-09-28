@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Second Button</button>
+    <script>
+      /*
+        //the dom is another built in object by javascript 
+        document.body.innerHTML = 'hello';
+        document.title = 'Good Job!';
+      */
+      /*
+        console.log(document.title);
+        document.title = "Changed";
+        //the dom combines javascript and html together
+        console.log(document.body); //js converts html element into a js object
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Good Job!</button>';
+      */
+      //this method querySelector gets any html element and put it in our js
+      //every html element has a property .innerHTML
+      console.log(document.querySelector('button').innerHTML); //gives us the stuff inside the button element 
+      document.querySelector('button').innerHTML = 'Changed'; //changes the name of the button 
+
+      //THE DOM COMBINES HTML AND JS AND GIVES JS FULL CONTROL OF THE WEBPAGE
+      const buttonElement = document.querySelector('.js-button');
+
+      console.log(buttonElement);
+    </script>
+  </body>
+</html>
