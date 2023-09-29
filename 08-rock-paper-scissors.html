@@ -17,20 +17,14 @@
       playGame('scissors');
     ">Scissors</button>
 
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
+    <p class="js-score">l</p>
 
     <button onclick="
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
-      updateScoreElement();
     ">Reset Score</button>
-
-
-
     <script>
       /*
         const score = {
@@ -46,26 +40,20 @@
           ties: 0
         };
 
-      //show the scores in the dom
-      updateScoreElement();
-
+       document.querySelector('js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
       /*
-      if(!score){
-        score = {
-          wins: 0,
-          losses: 0,
-          ties: 0
+        if(!score){
+          score = {
+            wins: 0,
+            losses: 0,
+            ties: 0
+          }
         }
-      }
       */
       //this outputs the score stored in the local storage but as a Json string 
       console.log(localStorage.getItem('score'));
       //this outputs the score stored in the local storage but as an object 
       console.log(JSON.parse(localStorage.getItem('score')));
-
-      function updateScoreElement(){
-        document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
-      }
 
       function pickComputerMove(){
         const randomNumber = Math.random();
@@ -123,15 +111,8 @@
         //local storage only supports strings so we use stringify
         localStorage.setItem('score',JSON.stringify(score));
         
-        //update the score in the dom
-        updateScoreElement();
-
-        document.querySelector('.js-result').innerHTML = `${result}`;
-
-        document.querySelector('.js-moves').innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}.`;
-
-//         alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
-// Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
         
       }
 
