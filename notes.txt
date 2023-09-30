@@ -1,0 +1,24 @@
+functions for arrays: 
+-forEach(value, index);
+-splice(value, howmany)
+-filter(value, index) 
+//how it works: take the first value, put it in the parameter and run the callback and so on till the end
+-map(value, index)
+//transform an array into another array and returns it 
+
+CLOSURE 
+ - if a function has access to a value 
+ - it will always have access to that value
+ - value gets packaged together (enclosed) with the function naturally happens with each function 
+
+ RECAP: 
+ 1. Functions are values 
+ 2. setTimeOut(), setInterval()
+ 3. forEach()
+ 4. Arrow functions, .addEventListener()
+ 5. querySelectorAll() along with forEach 
+ 6. .filter(), .map()
+ 7. feature of functions called CLOSURE
+
+PART1 :
+  Numbers, strings, variables, booleans, if-statements, functions, objects, DOM, combine with HTML and CSS, arrays, and loops

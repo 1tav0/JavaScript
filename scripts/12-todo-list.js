@@ -61,9 +61,12 @@ function renderTodoList() {
   document.querySelectorAll('.js-delete-todo-button')
   .forEach((deleteButton, index) => {
     deleteButton.addEventListener('click', () => {
+      //console.log(index) //will be 0 or whatever index aka CLOSURE
       todoList.splice(index, 1);
       renderTodoList();
     });
+
+    //console.log(index) // will be undefined bc we delete it
   });
 }
 //ADD EVENT LISTERNER TO ADD BUTTON FOR ONCLICK
