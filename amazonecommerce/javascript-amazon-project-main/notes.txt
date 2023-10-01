@@ -23,3 +23,27 @@
   -WE MUST UPDATE THE DOM QUANTITY ELEMENT  
     - Calculate the quantity.
     - Put the quantity on the page.
+/***MODULES***/
+  - A MODULE HELPS US MAKE USE OF THE SCRIPTS NAMES SO WHEN WE RENAME SOMETHING THE SAME NAME AS OUR SCRIPT FILES IT WE CAN STILL REUSE THE NAME SINCE THE FILE IS NOW 'WRAPPED' IN A MODULE SO IT WONT CAUSE NAMING CONFLICTS.
+    <script src="data/cart.js"></script>
+    1. Run all the code code inside the cart.js 
+      const cart = [];
+    2. create a cart variable 
+    3. we name anther variable cart now this CAUSES NAMING CONFLICT 
+    ---WITH MODULES: 
+    1. no longer running the code inside cart.js 
+    2. Therefore no more cart varible is created 
+    3. Therefore no more naming conflict
+  -HOW TO MAKE A MODULE?
+    -   1. Create a file 
+    -   2. Dont load the file with <script>
+    - Any variables we create inside the file, will be contained inside the file
+  -GET A VARIABLE OUT OF A FILE 
+    - Add type="module" attribute 
+    - Export what we want to access in other file here it is  cart 
+    - import {cart as myCart} from '../data/cart.js'
+  -PROS: WITH SCRIPTS THE ORTHER MATTERS
+  1.  <script src="data/cart.js"></script>
+  2.  <script src="data/products.js"></script>
+  3.  <script type="module" src="scripts/amazon.js"></script>
+  -WITH MODULES WE GET RID OF THIS ORDER 

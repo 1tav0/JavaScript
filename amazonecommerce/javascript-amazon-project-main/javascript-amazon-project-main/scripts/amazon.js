@@ -1,3 +1,4 @@
+import { cart } from '../data/cart.js'; //for the export module
 /***1.CREATE AN ARRAY DATA STRUCTURE TO SAVE THE DATA AKA PRODUCTS ***/
 /***WE ARE GETTING THE DATA FROM THE DATA FOLDER***/
 // const products = [{
