@@ -100,6 +100,14 @@ document.querySelectorAll('.js-add-to-cart')
   .forEach((button) => {
     button.addEventListener('click', () => {
       // console.log('Added product');
-
-    })
+      /***ADD DATA ATTRIBUTE JS***/
+      //console.log(button.dataset);
+      const productName = button.dataset.productName;
+      //this cart is the cart array we created in cart.js
+      cart.push({
+        productName: productName,
+        quantity: 1
+      });
+      //console.log(cart);
+    });
   });
