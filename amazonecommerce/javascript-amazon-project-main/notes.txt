@@ -48,3 +48,6 @@
   3.  <script type="module" src="scripts/amazon.js"></script>
   -WITH MODULES WE GET RID OF THIS ORDER 
   -SCRIPT THAT MAKES USE OF THE MODULE IS AKA **ENTRY POINT**
+/***WORKING ON THE CHECKOUT PAGE***/
+  - WE MAKE USE OF THE MAIN IDEA OF JS 
+  - In our Cart.js file we make use of just the id and quatity and use something called NORMALIZING THE DATA to not resave the products name, quantity, price etc. twice but isntead make use of the already in the products folder with some tricks.
