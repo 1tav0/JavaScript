@@ -47,3 +47,4 @@
   2.  <script src="data/products.js"></script>
   3.  <script type="module" src="scripts/amazon.js"></script>
   -WITH MODULES WE GET RID OF THIS ORDER 
+  -SCRIPT THAT MAKES USE OF THE MODULE IS AKA **ENTRY POINT**

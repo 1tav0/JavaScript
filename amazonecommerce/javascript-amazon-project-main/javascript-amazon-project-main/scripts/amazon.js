@@ -1,4 +1,4 @@
-import { cart } from '../data/cart.js'; //for the export module
+import { cart, addToCart } from '../data/cart.js'; //for the export module
 import { products } from '../data/products.js';
 /***1.CREATE AN ARRAY DATA STRUCTURE TO SAVE THE DATA AKA PRODUCTS ***/
 /***WE ARE GETTING THE DATA FROM THE DATA FOLDER***/
@@ -97,6 +97,19 @@ products.forEach((product) => {
 /***4.PUT IT ON THE WEB PAGE USING THE DOM***/
 // console.log(productsHTML);
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
+/***6.MAKE FUNCTIONS NOW***/
+
+function updateCartQuantity() {
+  let cartQuantity = 0;
+      cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+      });
+      // console.log(cart);
+      // console.log(cartQuantity);
+      document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
 /***5.MAKE FRONT END INTERACTIVE***/
 document.querySelectorAll('.js-add-to-cart')
   .forEach((button) => {
@@ -106,34 +119,13 @@ document.querySelectorAll('.js-add-to-cart')
       //console.log(button.dataset);
       const productId = button.dataset.productId;
       /***check if product is already in the cart */
-      let matchingItem;
-      cart.forEach((item) => {
-        if (productId === item.productId) {
-          matchingItem = item;
-        }
-      });
-
-      if (matchingItem) {
-        matchingItem.quantity += 1;
-      } else {
-        //this cart is the cart array we created in cart.js
-        cart.push({
-          productId: productId,
-          quantity: 1
-        });
-      }
+      addToCart(productId);
       // cart.push({
       //   productName: productName,
       //   quantity: 1
       // });
       /***TO UPDATE THE QUANTITY ELEMENT IN THE DOM OF AN THE CART***/
-      let cartQuantity = 0;
-      cart.forEach((item) => {
-        cartQuantity += item.quantity;
-      });
-      // console.log(cart);
-      // console.log(cartQuantity);
-      document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+      updateCartQuantity();
       
     });
   });
