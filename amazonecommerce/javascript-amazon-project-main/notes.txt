@@ -2,3 +2,7 @@
 1. save the data 
 2. generate the html 
 3. make it interactive
+  -   HOW DO WE KNOW WHICH PRODUCT TO ADD TO CART ?
+    - DATA ATTRIBUTE: 
+     - is just another HTML attribute 
+     - allows us to attach any information to an element 
