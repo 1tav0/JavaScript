@@ -124,6 +124,14 @@ document.querySelectorAll('.js-add-to-cart')
       //   productName: productName,
       //   quantity: 1
       // });
-      console.log(cart);
+      /***TO UPDATE THE QUANTITY ELEMENT IN THE DOM OF AN THE CART***/
+      let cartQuantity = 0;
+      cart.forEach((item) => {
+        cartQuantity += item.quantity;
+      });
+      // console.log(cart);
+      // console.log(cartQuantity);
+      document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+      
     });
   });

@@ -20,4 +20,6 @@
      - Check if the product is already in the cart, if so increase the quanity 
      - if not then add it to the cart
   - INSTEAD OF USING THE PRODUCT NAME TO IDENTIFY EACH ITEM WE MUST USE AN ID THIS WAY IF TWO ITEMS HAVE THE SAME NAME BUT DIFFERENT BRANDS IT WILL STILL WORK 
-    - 
+  -WE MUST UPDATE THE DOM QUANTITY ELEMENT  
+    - Calculate the quantity.
+    - Put the quantity on the page.
