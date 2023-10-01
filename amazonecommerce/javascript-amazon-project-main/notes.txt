@@ -1,0 +1,4 @@
+/***Main Idea of Javascript***/
+1. save the data 
+2. generate the html 
+3. make it interactive
