@@ -51,3 +51,6 @@
 /***WORKING ON THE CHECKOUT PAGE***/
   - WE MAKE USE OF THE MAIN IDEA OF JS 
   - In our Cart.js file we make use of just the id and quatity and use something called NORMALIZING THE DATA to not resave the products name, quantity, price etc. twice but isntead make use of the already in the products folder with some tricks.
+/***RADIO SELECTOR***/
+  - THE BULLET POINT WE SEE IN THE DELIVERY OPTION FOR CHECKOUT PAGE
+    i.e. <input type="radio" name="name1">

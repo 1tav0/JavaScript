@@ -1,5 +1,6 @@
 import { cart, addToCart } from '../data/cart.js'; //for the export module
 import { products } from '../data/products.js';
+import { formatCurrency } from './utils/money.js';
 /***1.CREATE AN ARRAY DATA STRUCTURE TO SAVE THE DATA AKA PRODUCTS ***/
 /***WE ARE GETTING THE DATA FROM THE DATA FOLDER***/
 // const products = [{
@@ -62,7 +63,7 @@ products.forEach((product) => {
       </div>
 
       <div class="product-price">
-        ${(product.priceCents/100).toFixed(2)}
+        $${formatCurrency(product.priceCents)}
       </div>
 
       <div class="product-quantity-container">
