@@ -11,7 +11,7 @@
      - have to start with "data-"
      - then give it any name 
           name                      value 
-      ...data-procduct-name = "${product.name}">
+      ...data-product-name = "${product.name}">
     -WHAT IS THE PURPOSE FOR A DATA ATTRIBUTE?
       - can attach the data image, price, etc.
       - note: if we console.log(button.dataset) in the console we will go from data-product-name KEBAB-CASE to PRODUCTNAME 
