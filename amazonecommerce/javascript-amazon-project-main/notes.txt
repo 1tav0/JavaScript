@@ -54,3 +54,9 @@
 /***RADIO SELECTOR***/
   - THE BULLET POINT WE SEE IN THE DELIVERY OPTION FOR CHECKOUT PAGE
     i.e. <input type="radio" name="name1">
+/***HOW TO DELETE FROM CART***/
+  -Make use of Data Attributes 
+    Algo: 
+      1. Create a new array 
+      2. Loop through the cart 
+      3. Add each product to the new array, except for this productId
